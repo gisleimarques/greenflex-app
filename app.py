@@ -4,7 +4,6 @@ from calculator import calcular_economia
 from pdf_generator import gerar_pdf
 
 st.set_page_config(page_title="GreenFlex - Análise de Fatura", layout="centered")
-st.image("assets/logo.jpeg", width=300)
 st.title("GreenFlex - Análise de Fatura EDP")
 
 uploaded_file = st.file_uploader("📎 Envie sua fatura EDP (PDF)", type="pdf")
