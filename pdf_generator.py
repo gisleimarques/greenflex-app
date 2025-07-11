@@ -22,6 +22,5 @@ def gerar_pdf(dados, economia):
     pdf.cell(200, 10, f"Valor Original: R$ {safe(dados.get('valor_total'))}", ln=True)
     pdf.cell(200, 10, f"Economia Estimada: R$ {safe(economia.get('economia_reais'))}", ln=True)
 
-    pdf_output = io.BytesIO()
-    pdf.output(pdf_output)
-    return pdf_output.getvalue()
+    pdf_bytes = pdf.output(dest='S').encode('latin-1')
+    return pdf_bytes
